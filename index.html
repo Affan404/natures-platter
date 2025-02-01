@@ -30,20 +30,27 @@
     .font-poppins{
       font-family: "Poppins", serif;
     }
+    header{
+      background-image: linear-gradient(white, #EFEBE3);
+    }
+    .popular-mock{
+      background-image: linear-gradient(135deg, #179800,#bcf5b4);
+    }
   </style>
 </head>
 
 <body class="font-sora">
   <!-- header start -->
-  <header class="bg-gradient-to-t from-pink-100 to-red-500">
+  <header class="relative" >
+    <img class="animate-bounce absolute top-80 right-20" src="assets/images/leaf.png" alt="animated img">
     <!-- nav section start -->
     <nav class="w-full lg:w-11/12 mx-auto  lg:pt-4">
       <div class="navbar text-black lg:px-0">
         <div class="flex-1">
           <!-- mobile logo -->
-          <a class=" text-xl lg:hidden"><img src="assets/images/leaf.png" alt="mobile logo"></a>
+          <a class=" text-xl lg:hidden cursor-pointer"><img src="assets/images/leaf.png" alt="mobile logo"></a>
           <!--logo  -->
-          <a class="hidden lg:flex text-xl"><img src="assets/images/logo-header.png" alt="logo"></a>
+          <a class="hidden lg:flex text-xl cursor-pointer"><img src="assets/images/logo-header.png" alt="logo"></a>
         </div>
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -69,11 +76,10 @@
             </ul>
           </div>
           <div class=" hidden lg:flex space-x-3 text-xl items-center">
-            <a class="text-2xl cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a class="text-2xl cursor-pointer"><i class="fa-solid fa-cart-plus"></i></a>
-            <a class="px-7 py-2 border border-[#179800]  rounded-lg cursor-pointer">Login</a>
-            <a
-              class="px-7 py-2 border border-transparent bg-primary-color text-white rounded-lg cursor-pointer">Register</a>
+            <a class="text-2xl cursor-pointer hover:text-[#179800] transition duration-300 ease-in-out"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a class="text-2xl cursor-pointer hover:text-[#179800] transition duration-300 ease-in-out"><i class="fa-solid fa-cart-plus"></i></a>
+            <a class="px-7 py-2 border border-[#179800]  rounded-lg cursor-pointer hover:bg-primary-color hover:text-white transition duration-300 ease-in-out">Login</a>
+            <a class="px-7 py-2 border border-transparent bg-primary-color text-white rounded-lg cursor-pointer hover:bg-white hover:text-black  hover:border-[#179800] transition duration-300 ease-in-out">Register</a>
           </div>
         </div>
 
@@ -141,7 +147,7 @@
         <!-- popular container -->
         <div class=" lg:flex gap-6 space-y-6 lg:space-y-0 ">
           <!-- left card -->
-          <div class="relative flex-1 bg-primary-color px-6 lg:px-9 pt-8 lg:pt-14 pb-28 lg:pb-7 lg:w-4/12 rounded-xl">
+          <div class="popular-mock relative flex-1  px-6 lg:px-9 pt-8 lg:pt-14 pb-28 lg:pb-7 lg:w-4/12 rounded-xl">
             <h3 class="text-2xl text-white font-semibold">30% off</h3>
             <p class="mt-5 mb-4 text-xs lg:text-base">Discover a world of treats, toys, and essentials handpicked for
             </p>
@@ -302,14 +308,14 @@
     </section>
     <!-- Arrival section end -->
     <!-- newslatter section start -->
-    <section>
+    <section class="relative -bottom-52 -mt-52 z-10">
       <!-- container -->
        <div class="lg:flex w-11/12 mx-auto lg:items-center bg-baby-pink px-3 py-9 justify-center lg:justify-start lg:px-20 lg:py-12 rounded-3xl">
         <div class="w-full lg:w-6/12 flex justify-center">
           <img class="w-56 lg:w-auto " src="assets/images/vegetable-busket.png" alt="img">
         </div>
         <div class="w-full lg:w-6/12 items-center  text-center lg:text-start ">
-          <h2 class="text-2xl text-primary-color mt-6 lg:mt-0 lg:text-black1 lg:text-4xl   font-semibold">Arrival & Offers</h2>
+          <h2 class="text-2xl text-primary-color mt-6 lg:mt-0 lg:text-black1 lg:text-4xl   font-semibold">Get Grocery News!</h2>
           <p class="mt-4 lg:mt-6 text-base lg:text-xl text-black1">Exclusive training tips, ticks, product deals and more.</p>
           <input class="block w-full lg:w-9/12 mx-auto lg:mx-0 p-2 lg:p-4 my-4 lg:my-9 bg-white text-sm lg:text-base rounded-lg" type="email" placeholder="Enter email...">
           <button class="btn px-7 py-2 bg-green-500 text-white">Subscribe</button>
@@ -319,8 +325,32 @@
     <!-- newslatter section end -->
   </main>
   <!-- main start end-->
+
   <!-- footer start -->
-  <footer></footer>
+  <footer class="pt-64 pb-12 lg:pt-[370px] lg:pb-[140px] bg-primary-color text-white relative">
+    <!-- container -->
+    <div class=" grid grid-cols-1 gap-6 lg:gap-20 lg:grid-cols-3 justify-between text-base-content w-11/12 mx-auto">
+      <div class="text-white inline-flex flex-col space-y-3">
+        <img class="w-24 lg:w-36 cursor-pointer" src="assets/images/logo-footer.png" alt="logo">
+        <p class="text-base lg:text-xl opacity-70">Discover a world of treats, toys, and <br> essentials handpicked for your furry friends</p>
+      </div>
+      <nav class="text-white flex flex-col gap-5 lg:gap-8  text-base lg:text-xl">
+        <a class="link link-hover">Product</a>
+        <a class="link link-hover">Service</a>
+        <a class="link link-hover">Contact Us</a>
+      </nav>
+      <nav class="flex flex-col text-white lg:justify-end lg:items-end">
+        <h6 class="text-base">Follow Us</h6>
+        <div class="flex gap-4">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </nav>
+    </div>
+  </footer>
+  <!-- footer end -->
 
 </body>
 
